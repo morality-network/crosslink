@@ -1,5 +1,5 @@
 # crosslink
-A protocol that allows the movement of tokens between chains
+A protocol (modified ERC20) that allows the movement of tokens between chains. This does rely on serverside code to bridge the gap between the chains.
 
 <br>
 This is a WIP and I do not recommend to use this as is. The reasoning is that this was done as a hackathon entry using a webhook to initiate the redemptions but the webhook has no authentication so this would allow anyone with the address to call it and therefore mint endless tokens on any chain connected. Over the coming weeks I will update this and remove the webhook and replace with a hosted service listener for new events, hook up a database to store events (to see what has already been processed) and use this to initiate the redemption.
